@@ -21,6 +21,9 @@ jobs:
       with:
         python-version: 3.12
 
+    - name: Add project root to PYTHONPATH
+      run: echo "PYTHONPATH=$PYTHONPATH:$(pwd)" >> $GITHUB_ENV
+
     - name: Install pytest
       run: pip install pytest
 
